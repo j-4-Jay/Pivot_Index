@@ -1,4 +1,5 @@
 
+# A Function to get the Integers for the Main List i.e. nums
 def Input_List():
     list = []
     while True:
@@ -15,6 +16,7 @@ def Input_List():
 
     return list
 
+# A Function to pause the program and get the user permisson to proceed
 def press_enter_to_continue():
     while True:
         user_input = input("Are you Ready to find the Pivot Index of the Given List?(Press Enter to Proceed)")
@@ -23,22 +25,25 @@ def press_enter_to_continue():
         else:
             print("Invalid input. Please press Enter without typing anything.")
 
-
+# Program to find the Pivot Index
 nums = []
-obtain_list = Input_List()
-nums.extend(obtain_list)
-press_enter_to_continue()
+obtain_list = Input_List() # Get the return value of the predefined Function
+nums.extend(obtain_list)  # Get the values to the nums variable
+press_enter_to_continue() # Pause for the process
 
 Pivot_Index = -1 # Initialize the value to -1 as if there is no Pivot Index
-Total_Sum = sum(nums)
-R_Sum = Total_Sum
-L_Sum = 0
 
-for i in range(len(nums)):
-    Current_Value = nums[i]
-    R_Sum -= Current_Value       
-    if L_Sum == R_Sum:
-        Pivot_Index = i        
-    L_Sum += Current_Value
+Total_Sum = sum(nums) # Plan 1
+R_Sum = Total_Sum # Plan 1
+L_Sum = 0 # Plan 1
+
+for i in range(len(nums)): # Plan 2
+    Current_Value = nums[i] # Plan 2
+    R_Sum -= Current_Value # Plan 2
+
+    if L_Sum == R_Sum: # Plan 3
+        Pivot_Index = i # Plan 3
+
+    L_Sum += Current_Value # Plan 4
     
 print(f'The PIVOT INDEX of the given List is: {Pivot_Index}')
