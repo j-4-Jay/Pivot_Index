@@ -47,3 +47,6 @@ for i in range(len(nums)): # Plan 2
     L_Sum += Current_Value # Plan 4
     
 print(f'The PIVOT INDEX of the given List is: {Pivot_Index}')
+
+# ! this is a test comment
+# ? what is this???
